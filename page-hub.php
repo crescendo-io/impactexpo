@@ -1,4 +1,8 @@
 <?php
+/*
+Template Name: Hub
+*/
+
 get_header();
 
 if( have_rows('page') ):

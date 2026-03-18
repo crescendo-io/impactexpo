@@ -111,6 +111,35 @@ p{
     }
 }
 
+.breadcrumb{
+    position: absolute;
+    top: 100%;
+    padding-top: 20px;
+    background: transparent;
+    color: #FFF;
+    left: 0;
+
+    a{
+        color: #FFF;
+        font-size: 13px;
+        padding-right: 10px;
+        display: inline-block;
+
+        &:after{
+            content : '›';
+            padding-left: 10px;
+        }
+
+        &:hover{
+            text-decoration: none;
+        }
+    }
+
+    span{
+        font-size: 13px;
+        font-weight: 600;
+    }
+}
 
 .button{
     background: #FFF;

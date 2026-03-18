@@ -39,4 +39,5 @@
             </div>
         </div>
     </div>
+    <?php custom_breadcrumb(); ?>
 </header>
