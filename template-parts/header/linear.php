@@ -6,6 +6,9 @@
     $option_logo_scroll_array = get_custom_thumb($option_logo_scroll, 'full');
 ?>
 
+<div class="sentence-header">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium blanditiis dolorem fuga fugiat incidunt ipsum iusto laboriosam magni molestias, natus nobis nostrum quod quos repudiandae sequi sunt ut?
+</div>
 <header class="burger linear">
     <div class="container-fluid">
         <div class="row">
@@ -37,12 +40,3 @@
         </div>
     </div>
 </header>
-
-
-<div class="menu-navigation">
-    <?= wp_nav_menu(array(
-        'menu'				=> "menu", // (int|string|WP_Term) Desired menu. Accepts a menu ID, slug, name, or object.
-        'menu_class'		=> "",
-        'container_class'	=> "menu",// (string) CSS class to use for the ul element which forms the menu. Default 'menu'.
-    )); ?>
-</div>
