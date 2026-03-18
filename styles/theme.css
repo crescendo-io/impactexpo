@@ -18,6 +18,9 @@ ul li{
     padding: 0 30px;
 }
 
+.strate{
+    padding: 85px 0;
+}
 
 .no-padding-top{
     padding-top: 0;
@@ -196,4 +199,27 @@ p{
 /* CITATION */
 .container-slider-quotes .citation{
     text-align: center;
+}
+
+/*SLIDER CARDS*/
+
+.container-slider-cards{
+    .container-buttons{
+        margin-top: 40px;
+    }
+
+    .swiper-pagination{
+        position: relative;
+    }
+
+    &.white{
+        .swiper-pagination-bullet{
+            background: #FFF;
+        }
+    }
+}
+
+/*Texte image*/
+.container-image-text .image-strate{
+    width: 100%;
 }
