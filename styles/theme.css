@@ -10,6 +10,21 @@ p,
     font-family: "Poppins", sans-serif;
 }
 
+.text-content{
+    ul{
+        margin-top: 30px;
+    }
+    li{
+        display: inline-flex;
+        margin-bottom: 7px;
+        &:before{
+            content: '-';
+            margin-right: 10px;
+            display: inline;
+        }
+    }
+}
+
 ul li{
     font-size: 17px;
 }
@@ -73,7 +88,7 @@ p{
     padding: 15px 35px;
     border-radius: 5px;
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 700;
     color: #AE6532;
 
     &.primary{
@@ -143,11 +158,11 @@ header.burger .logo, header.burger .logo-scroll{
 footer{
     padding: 65px;
     .logo-footer{
-        width: 150px;
+        width: 180px;
     }
 
     .copyright{
-        padding-top: 50px;
+        padding-top: 80px;
         font-size: 14px;
 
         a{
@@ -194,7 +209,7 @@ footer{
 
 .strate-hero.dark:before{
     z-index: 3;
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0, 0, 0, 0.65);
 }
 
 .strate-hero.middle{
@@ -215,6 +230,7 @@ footer{
 
     h2,h3,h4{
         margin-bottom: 0;
+        font-size: 30px;
     }
 
     img{
@@ -253,7 +269,7 @@ footer{
         position: absolute;
         bottom: 0;
         width: calc(100% - 100px);
-        padding: 40px;
+        padding: 30px;
     }
 }
 
