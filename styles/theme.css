@@ -10,17 +10,44 @@ p,
     font-family: "Poppins", sans-serif;
 }
 
+.white{
+    .swiper-button-next, .swiper-button-prev{
+        color: #FFF;
+    }
+}
+
+.swiper-button-next, .swiper-button-prev{
+    color: #fff;
+    background: #1C2056;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.swiper-button-next:after, .swiper-button-prev:after{
+    font-size: 14px;
+}
+
+.swiper-button-next, .swiper-button-prev{
+    right: 40px;
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next{
+    left: 40px;
+}
 .text-content{
     ul{
         margin-top: 30px;
     }
     li{
-        display: inline-flex;
+        display: block;
         margin-bottom: 7px;
+        margin-left: 15px;
+        position: relative;
         &:before{
             content: '-';
             margin-right: 10px;
-            display: inline;
+            position: absolute;
+            left: -15px;
         }
     }
 }
@@ -43,18 +70,21 @@ ul li{
 
 h1{
     font-size: 60px;
+    line-height: 60px;
     font-weight: 800;
     margin-bottom: 15px;
 }
 
 h2{
     font-size: 50px;
+    line-height: 53px;
     font-weight: 800;
     color: #1C2056;
     margin-bottom: 15px;
 }
 h3{
     font-size: 40px;
+    line-height: 43px;
     font-weight: 800;
     color: #AE6532;
     margin-bottom: 15px;
@@ -90,6 +120,7 @@ p{
     font-size: 16px;
     font-weight: 700;
     color: #AE6532;
+    transition: .3s;
 
     &.primary{
         background: #AE6532;
@@ -97,6 +128,7 @@ p{
 
         &:hover{
             color: #FFF;
+            background: #D78349;
         }
     }
 
@@ -133,7 +165,7 @@ header.linear{
 
 header.burger.is-scrolled{
     width: 100%;
-    border-radius: 0;
+    border-radius: 0 0 15px 15px;
     transform: translateY(-100%) translateX(-50%);
     background-color: #faf8f5;
 }
@@ -195,16 +227,20 @@ footer{
     border-radius: 0 0 60px 60px;
 }
 .strate-hero .strate-hero_inner{
-    text-align: left;
     color: #FFF;
     position: relative;
-    transform: none !important;
-    left: 10%;
+    left: 20%;
+    transform: translateX(-0%) translateY(0) !important;
     top: auto;
     padding-top: 300px;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
     z-index: 6;
     max-width: 900px;
+    width: 100%;
+    text-align: left;
+    p,h1{
+        max-width: 900px;
+    }
 }
 
 .strate-hero.dark:before{
@@ -228,14 +264,33 @@ footer{
     border-radius: 30px;
     overflow: hidden;
 
+    &:hover{
+        img{
+            transform: scale(1.05);
+        }
+
+        a{
+            &:after{
+                transform: translateX(0px) scale(1.3);
+            }
+        }
+    }
+
     h2,h3,h4{
         margin-bottom: 0;
-        font-size: 30px;
+        font-size: 25px;
+        line-height: 28px;
+    }
+
+    p{
+        font-size: 15px;
+        margin-top: 13px;
     }
 
     img{
         display: block;
         margin-bottom: 0;
+        transition: .3s;
     }
     a{
         height: 100%;
@@ -247,11 +302,12 @@ footer{
         &:before{
             content : "";
             width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.4);
+            height: 70%;
+            background: linear-gradient(-180deg,rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, .85) 100%);
             position: absolute;
             left: 0;
-            top: 0;
+            bottom: 0;
+            z-index: 30;
         }
 
         &:after{
@@ -263,6 +319,8 @@ footer{
             position: absolute;
             right: 30px;
             bottom: 30px;
+            z-index: 40;
+            transition: .3s;
         }
     }
     .text{
@@ -270,6 +328,14 @@ footer{
         bottom: 0;
         width: calc(100% - 100px);
         padding: 30px;
+        padding-right: 0;
+        z-index: 40;
+    }
+}
+
+.container-slider-cards{
+    .swiper-button-next, .swiper-button-prev{
+        display: none;
     }
 }
 
