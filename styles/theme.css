@@ -139,6 +139,40 @@ header.burger .logo, header.burger .logo-scroll{
     width: 130px;
 }
 
+/* FOOTER */
+footer{
+    padding: 65px;
+    .logo-footer{
+        width: 150px;
+    }
+
+    .copyright{
+        padding-top: 50px;
+        font-size: 14px;
+
+        a{
+            color: #000;
+        }
+    }
+
+    p{
+        color: #1C2056;
+        font-weight: 600;
+    }
+    li{
+        a{
+            color: #000;
+            font-size: 14px;
+        }
+    }
+}
+.social li svg path{
+    fill: #1C2056;
+}
+
+.social{
+    padding: 0;
+}
 
 /* HERO */
 
@@ -249,6 +283,15 @@ header.burger .logo, header.burger .logo-scroll{
     text-align: center;
 }
 
+.container-slider-quotes .citation .stars path{
+    fill: #1C2056;
+}
+
+.container-slider-quotes .citation .author-infos{
+    text-align: left;
+    color: #1C2056;
+}
+
 /*SLIDER CARDS*/
 
 .container-slider-cards{
@@ -270,4 +313,63 @@ header.burger .logo, header.burger .logo-scroll{
 /*Texte image*/
 .container-image-text .image-strate{
     width: 100%;
+}
+
+
+/* Formulaire */
+.formulaire-footer{
+    background-color: #1C2056;
+    padding: 85px 85px;
+    border-radius: 0 0 60px 60px;
+    ul{
+        margin-top: 30px;
+    }
+    li{
+        margin-bottom: 10px;
+    }
+    .picto{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: rgba(255,255,255,.2);
+        border-radius: 50%;
+        margin-right: 10px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    .container-text-devis{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .container-form{
+        background: #FFF;
+        padding: 65px;
+        border-radius: 30px;
+
+        h3{
+            color: #000;
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        input, textarea{
+            display: block;
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #DADADA;
+            margin-bottom: 15px;
+            font-size: 14px;
+            resize: none;
+            border-radius: 4px;
+        }
+
+        button{
+            border: 0;
+            width: 100%;
+        }
+    }
 }
