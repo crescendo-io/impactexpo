@@ -68,6 +68,10 @@ ul li{
     padding-top: 0;
 }
 
+.border-top{
+    border-top: 1px solid rba(0,0,0,0.1);
+}
+
 h1{
     font-size: 60px;
     line-height: 60px;
@@ -100,6 +104,11 @@ h4{
 p{
     font-size: 18px;
     color: #4A4A4A;
+    display: block;
+}
+
+.container-text-only p{
+    display: block;
 }
 
 .dark p{
