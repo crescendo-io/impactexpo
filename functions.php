@@ -129,3 +129,95 @@ function custom_breadcrumb() {
 
 add_image_size( 'relsize', 1920, 1080, true );
 add_image_size( 'crosslink', 900, 900, true );
+
+/**
+ * Ajoute un selecteur de styles dans tous les TinyMCE/WYSIWYG.
+ */
+function impactexpo_add_tinymce_style_select( $buttons ) {
+    if ( ! in_array( 'styleselect', $buttons, true ) ) {
+        array_unshift( $buttons, 'styleselect' );
+    }
+
+    return $buttons;
+}
+add_filter( 'mce_buttons_2', 'impactexpo_add_tinymce_style_select' );
+
+/**
+ * Definit les styles editor qui inserent des div avec classes "style-H*".
+ */
+function impactexpo_register_tinymce_style_formats( $init_array ) {
+    $style_formats = array(
+        array(
+            'title'   => 'Style H1',
+            'block'   => 'div',
+            'classes' => 'style-H1',
+            'wrapper' => true,
+        ),
+        array(
+            'title'   => 'Style H2',
+            'block'   => 'div',
+            'classes' => 'style-H2',
+            'wrapper' => true,
+        ),
+        array(
+            'title'   => 'Style H3',
+            'block'   => 'div',
+            'classes' => 'style-H3',
+            'wrapper' => true,
+        ),
+        array(
+            'title'   => 'Style H4',
+            'block'   => 'div',
+            'classes' => 'style-H4',
+            'wrapper' => true,
+        ),
+        array(
+            'title'   => 'Style H5',
+            'block'   => 'div',
+            'classes' => 'style-H5',
+            'wrapper' => true,
+        ),
+        array(
+            'title'   => 'Style H6',
+            'block'   => 'div',
+            'classes' => 'style-H6',
+            'wrapper' => true,
+        ),
+    );
+
+    $init_array['style_formats'] = wp_json_encode( $style_formats );
+    $init_array['style_formats_merge'] = true;
+
+    return $init_array;
+}
+add_filter( 'tiny_mce_before_init', 'impactexpo_register_tinymce_style_formats' );
+
+/**
+ * Charge les styles front dans les editeurs du back-office.
+ */
+function impactexpo_setup_editor_styles() {
+    add_theme_support( 'editor-styles' );
+    add_editor_style( 'styles/theme.css' );
+}
+add_action( 'after_setup_theme', 'impactexpo_setup_editor_styles' );
+
+/**
+ * Force TinyMCE (notamment ACF WYSIWYG) a charger le CSS du theme.
+ */
+function impactexpo_add_mce_css( $mce_css ) {
+    $theme_css_uri = get_stylesheet_directory_uri() . '/styles/theme.css';
+    $theme_css_path = get_stylesheet_directory() . '/styles/theme.css';
+
+    if ( file_exists( $theme_css_path ) ) {
+        $theme_css_uri = add_query_arg( 'ver', filemtime( $theme_css_path ), $theme_css_uri );
+    }
+
+    if ( ! empty( $mce_css ) ) {
+        $mce_css .= ',';
+    }
+
+    $mce_css .= $theme_css_uri;
+
+    return $mce_css;
+}
+add_filter( 'mce_css', 'impactexpo_add_mce_css' );

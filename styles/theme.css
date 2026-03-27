@@ -72,33 +72,41 @@ ul li{
     border-top: 1px solid rba(0,0,0,0.1);
 }
 
-h1{
+h1, .style-H1{
     font-size: 60px;
     line-height: 60px;
     font-weight: 800;
     margin-bottom: 15px;
 }
 
-h2{
+.style-H1 p,
+.style-H2 p,
+.style-H3 p,
+.style-H4 p{
+    font-size: inherit;
+}
+
+h2, .style-H2{
     font-size: 50px;
     line-height: 53px;
     font-weight: 800;
     color: #1C2056;
     margin-bottom: 15px;
 }
-h3{
+h3, .style-H3{
     font-size: 40px;
     line-height: 43px;
     font-weight: 800;
     color: #AE6532;
     margin-bottom: 15px;
 }
-h4{
+h4, .style-H4{
     text-transform: uppercase;
     font-weight: 800;
     color: #AE6532;
     letter-spacing: 2px;
     margin-bottom: 15px;
+    font-size: 14px;
 }
 
 p{
