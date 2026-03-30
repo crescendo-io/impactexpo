@@ -221,3 +221,30 @@ function impactexpo_add_mce_css( $mce_css ) {
     return $mce_css;
 }
 add_filter( 'mce_css', 'impactexpo_add_mce_css' );
+
+/**
+ * SMTP Brevo via PHPMailer (cles dans wp-config.php) :
+ * IMPACTEXPO_BREVO_SMTP_USER, IMPACTEXPO_BREVO_SMTP_PASS,
+ * IMPACTEXPO_MAIL_FROM, IMPACTEXPO_MAIL_FROM_NAME.
+ */
+function impactexpo_configure_brevo_smtp( $phpmailer ) {
+    if ( ! defined( 'IMPACTEXPO_BREVO_SMTP_PASS' ) || '' === IMPACTEXPO_BREVO_SMTP_PASS ) {
+        return;
+    }
+
+    $phpmailer->isSMTP();
+    $phpmailer->Host       = 'smtp-relay.brevo.com';
+    $phpmailer->SMTPAuth   = true;
+    $phpmailer->Port       = 587;
+    $phpmailer->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
+    $phpmailer->Username   = defined( 'IMPACTEXPO_BREVO_SMTP_USER' ) ? IMPACTEXPO_BREVO_SMTP_USER : '';
+    $phpmailer->Password   = IMPACTEXPO_BREVO_SMTP_PASS;
+
+    if ( defined( 'IMPACTEXPO_MAIL_FROM' ) && IMPACTEXPO_MAIL_FROM ) {
+        $phpmailer->From = IMPACTEXPO_MAIL_FROM;
+    }
+    if ( defined( 'IMPACTEXPO_MAIL_FROM_NAME' ) && IMPACTEXPO_MAIL_FROM_NAME ) {
+        $phpmailer->FromName = IMPACTEXPO_MAIL_FROM_NAME;
+    }
+}
+add_action( 'phpmailer_init', 'impactexpo_configure_brevo_smtp' );
