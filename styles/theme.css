@@ -467,9 +467,9 @@ footer{
     }
 
     .container-text-devis{
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
+        position: sticky;
+        top: 200px;
+    
     }
 
     .container-form{
@@ -478,13 +478,14 @@ footer{
         border-radius: 30px;
 
         h3{
-            color: #000;
+            color: #1C2056;
             text-align: center;
             font-size: 30px;
             margin-bottom: 30px;
         }
     }
 }
+
 
 input, textarea{
     display: block;
@@ -495,6 +496,9 @@ input, textarea{
     font-size: 14px;
     resize: none;
     border-radius: 4px;
+}
+input:invalid, textarea:invalid{
+    background-color: #fff;
 }
 
 button{
@@ -537,4 +541,163 @@ button{
             margin-bottom: 30px;
         }
     }
+}
+
+/* Formulaire devis (Hub + Produit) */
+.impactexpo-hp{
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.impactexpo-lead-form .impactexpo-field{
+    display: block;
+    margin-bottom: 0;
+}
+
+.impactexpo-lead-form .impactexpo-label{
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1C2056;
+    margin-bottom: 8px;
+}
+
+.impactexpo-lead-form .impactexpo-label abbr{
+    text-decoration: none;
+    color: #AE6532;
+}
+
+.impactexpo-checkbox{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 18px 0;
+    font-size: 14px;
+    color: #4A4A4A;
+    cursor: pointer;
+}
+
+.impactexpo-checkbox input{
+    margin-top: 3px;
+    flex-shrink: 0;
+    width: auto;
+}
+
+.impactexpo-project-fields{
+    border-left: 4px solid #AE6532;
+    padding: 20px;
+    background: #F7F7F7;
+    margin: 10px 0 24px;
+}
+
+.impactexpo-project-fields.is-hidden,
+.impactexpo-project-fields[hidden]{
+    display: none;
+}
+
+
+.impactexpo-field-files .impactexpo-files-hint{
+    font-size: 13px;
+    color: #666;
+    margin: 0 0 10px;
+}
+
+.impactexpo-lead-form input[type="file"]{
+    padding: 10px 0;
+    border: 0;
+    margin-bottom: 10px;
+}
+
+.impactexpo-file-list{
+    list-style: disc;
+    padding: 12px 14px 12px 28px;
+    margin: 0 0 12px;
+    background: #f5f5f5;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    font-size: 13px;
+    color: #333;
+}
+
+.impactexpo-file-list li{
+    margin-bottom: 6px;
+}
+
+.impactexpo-file-list li:last-child{
+    margin-bottom: 0;
+}
+
+.impactexpo-file-list-warn{
+    list-style: none;
+    margin-left: -14px;
+    color: #AE6532;
+    font-weight: 600;
+}
+
+.impactexpo-rgpd .impactexpo-rgpd-text{
+    line-height: 1.5;
+}
+
+.impactexpo-rgpd .impactexpo-rgpd-text a{
+    color: #AE6532;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.impactexpo-rgpd .impactexpo-rgpd-text abbr{
+    text-decoration: none;
+    color: #AE6532;
+    margin-left: 2px;
+}
+
+.impactexpo-files-contact-note{
+    font-size: 13px;
+    color: #4A4A4A !important;
+    margin: 0 0 20px;
+    line-height: 1.5;
+}
+
+.impactexpo-files-contact-note a{
+    color: #AE6532;
+    font-weight: 600;
+}
+
+.impactexpo-lead-body[hidden],
+.impactexpo-lead-body.is-hidden{
+    display: none !important;
+}
+
+.impactexpo-lead-form--sent .impactexpo-lead-body{
+    display: none !important;
+}
+
+.impactexpo-lead-form--sent .impactexpo-lead-feedback.is-success{
+    margin-bottom: 0;
+}
+
+.impactexpo-lead-feedback{
+    padding: 14px 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    scroll-margin-top: 100px;
+}
+
+.impactexpo-lead-feedback.is-success{
+    background: #e8f5e9;
+    color: #1b5e20;
+    border: 1px solid #a5d6a7;
+}
+
+.impactexpo-lead-feedback.is-error{
+    background: #ffebee;
+    color: #b71c1c;
+    border: 1px solid #ef9a9a;
+}
+
+.formulaire-footer.white .impactexpo-lead-form .impactexpo-label{
+    color: #1C2056;
 }

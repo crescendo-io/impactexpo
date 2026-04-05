@@ -1,5 +1,18 @@
 <?php
 
+require_once get_stylesheet_directory() . '/inc/lead-form.php';
+
+/**
+ * Formulaire devis (Brevo + e-mail) — constantes wp-config.php recommandées :
+ *
+ * define( 'IMPACTEXPO_BREVO_API_KEY', 'xkeysib-...' );  // API HTTP (liste contacts)
+ * define( 'IMPACTEXPO_BREVO_LEAD_LIST_ID', 32 );        // Liste Brevo (defaut 32 si omis)
+ * define( 'IMPACTEXPO_LEAD_NOTIFICATION_EMAIL', '...' ); // Destinataire du recap (defaut admin_email)
+ * define( 'IMPACTEXPO_LEAD_PUBLIC_CONTACT_EMAIL', '...' ); // E-mail affiche sous les PJ (defaut admin_email)
+ *
+ * Mapping Brevo (cles exactes) : voir impactexpo_lead_send_brevo() dans inc/lead-form.php
+ * — PRENOM, NOM, SMS, COMPANY_ADDRESS_LINE_1 (nom societe), ADRESSE_SOCIETE, VILLE, etc.
+ */
 
 function add_hreflang_tags() {
     // Définir l'URL de la version par défaut (x-default) du site
@@ -45,8 +58,16 @@ function wpm_enqueue_styles(){
         'script', // Identifiant unique du script
         get_stylesheet_directory_uri() . '/js/script.js', // URL du fichier JS
         array( 'jquery' ), // Dépendances (si besoin, ici 'jquery')
-        null, // Version du script (null pour désactiver la gestion des versions)
+        filemtime( get_stylesheet_directory() . '/js/script.js' ),
         true // Charger dans le footer (true) ou dans le header (false)
+    );
+
+    wp_localize_script(
+        'script',
+        'impactexpoLead',
+        array(
+            'ajaxUrl' => admin_url( 'admin-ajax.php' ),
+        )
     );
 }
 

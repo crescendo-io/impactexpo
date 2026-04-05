@@ -39,14 +39,7 @@ endif; ?>
                     <h3>
                         Décrivez votre projet
                     </h3>
-                    <form action="">
-                        <input type="text" placeholder="Nom / Entreprise * ">
-                        <input type="email" placeholder="Email">
-                        <input type="text" placeholder="Nom / Entreprise * ">
-                        <input type="email" placeholder="Email">
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                        <button type="submit" class="button primary">Envoyer ma demande</button>
-                    </form>
+                    <?php get_template_part( 'template-parts/form-lead-devis' ); ?>
                 </div>
             </div>
         </div>
