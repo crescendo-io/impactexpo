@@ -828,3 +828,197 @@ button{
         font-size: 14px;
     }
 }
+
+/* Strate Grille de modèles */
+.strate-grille-modeles{
+    background: #1C2056;
+    color: #FFF;
+    padding: 85px 0;
+}
+
+.strate-grille-modeles__intro{
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.strate-grille-modeles__eyebrow{
+    margin: 0 0 14px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #AE6532;
+}
+
+.strate-grille-modeles__title{
+    margin: 0 0 14px;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 800;
+    color: #FFF;
+}
+
+.strate-grille-modeles__subtitle{
+    margin: 0 auto;
+    max-width: 640px;
+    font-size: 18px;
+    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.strate-grille-modeles__category{
+    padding: 36px 0 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.strate-grille-modeles__category:first-of-type{
+    border-top: 0;
+    padding-top: 0;
+}
+
+.strate-grille-modeles__category-head{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px 16px;
+    margin-bottom: 28px;
+}
+
+.strate-grille-modeles__category-title{
+    margin: 0;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #FFF;
+}
+
+.strate-grille-modeles__category-count{
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.strate-grille-modeles__grid{
+    display: grid;
+    gap: 22px;
+}
+
+.strate-grille-modeles__grid--cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.strate-grille-modeles__grid--cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.strate-grille-modeles__grid--cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.strate-grille-modeles__card{
+    background: #FFF;
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.strate-grille-modeles__card-media{
+    aspect-ratio: 16 / 10;
+    background: #E8E8E8;
+    overflow: hidden;
+}
+
+.strate-grille-modeles__card-media img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.strate-grille-modeles__card-placeholder{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ececec 0%, #d8d8d8 100%);
+}
+
+.strate-grille-modeles__card-body{
+    padding: 22px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.strate-grille-modeles__card-title{
+    margin: 0 0 10px;
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: 800;
+    color: #1C2056;
+}
+
+.strate-grille-modeles__card-text{
+    margin: 0 0 18px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #4A4A4A;
+}
+
+.strate-grille-modeles__tags{
+    list-style: none;
+    margin: auto 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.strate-grille-modeles__tag{
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #EEF1F7;
+    color: #1C2056;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+@media (max-width: 1100px){
+    .strate-grille-modeles__grid--cols-4{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 991px){
+    .strate-grille-modeles__grid--cols-3,
+    .strate-grille-modeles__grid--cols-4{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .strate-grille-modeles__title{
+        font-size: 36px;
+    }
+
+    .strate-grille-modeles__category-title{
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 575px){
+    .strate-grille-modeles{
+        padding: 55px 0;
+    }
+
+    .strate-grille-modeles__grid--cols-2,
+    .strate-grille-modeles__grid--cols-3,
+    .strate-grille-modeles__grid--cols-4{
+        grid-template-columns: 1fr;
+    }
+
+    .strate-grille-modeles__title{
+        font-size: 28px;
+    }
+}

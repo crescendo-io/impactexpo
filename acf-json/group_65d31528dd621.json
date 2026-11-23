@@ -3201,6 +3201,367 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_67e9b2c3d4e5f": {
+                    "key": "layout_67e9b2c3d4e5f",
+                    "name": "grille_modeles",
+                    "label": "Grille de modèles",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_67e9b2c3d4e01",
+                            "label": "Contenu",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_67e9b2c3d4e02",
+                            "label": "Sur-titre",
+                            "name": "grille_modeles_eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Ex. NOS MODÈLES",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "NOS MODÈLES",
+                            "maxlength": "",
+                            "placeholder": "NOS MODÈLES",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_67e9b2c3d4e03",
+                            "label": "Titre",
+                            "name": "grille_modeles_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "20 modèles de roll-up",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_67e9b2c3d4e04",
+                            "label": "Sous-titre",
+                            "name": "grille_modeles_subtitle",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "Regroupés par usage pour aider au choix.",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_67e9b2c3d4e05",
+                            "label": "Catégories",
+                            "name": "grille_modeles_categories",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Chaque catégorie affiche un titre, un compteur optionnel et une grille de cartes. Le nombre de colonnes est réglable par catégorie.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "pagination": 0,
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "field_67e9b2c3d4e06",
+                            "button_label": "Ajouter une catégorie",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_67e9b2c3d4e06",
+                                    "label": "Titre de la catégorie",
+                                    "name": "category_title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "60",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "Petits budgets & opérations ponctuelles",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_67e9b2c3d4e05"
+                                },
+                                {
+                                    "key": "field_67e9b2c3d4e07",
+                                    "label": "Compteur (optionnel)",
+                                    "name": "category_count",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Ex. « 3 modèles ». Si vide, le nombre de cartes est calculé automatiquement.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "40",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "3 modèles",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_67e9b2c3d4e05"
+                                },
+                                {
+                                    "key": "field_67e9b2c3d4e08",
+                                    "label": "Colonnes",
+                                    "name": "category_columns",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "Nombre de cartes par ligne (desktop).",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "30",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "2": "2 colonnes",
+                                        "3": "3 colonnes",
+                                        "4": "4 colonnes"
+                                    },
+                                    "default_value": "3",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "parent_repeater": "field_67e9b2c3d4e05"
+                                },
+                                {
+                                    "key": "field_67e9b2c3d4e09",
+                                    "label": "Cartes",
+                                    "name": "category_cards",
+                                    "aria-label": "",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "layout": "block",
+                                    "pagination": 0,
+                                    "min": 0,
+                                    "max": 0,
+                                    "collapsed": "field_67e9b2c3d4e0b",
+                                    "button_label": "Ajouter une carte",
+                                    "rows_per_page": 20,
+                                    "parent_repeater": "field_67e9b2c3d4e05",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_67e9b2c3d4e0a",
+                                            "label": "Image",
+                                            "name": "card_image",
+                                            "aria-label": "",
+                                            "type": "image",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "30",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "return_format": "array",
+                                            "library": "all",
+                                            "min_width": "",
+                                            "min_height": "",
+                                            "min_size": "",
+                                            "max_width": "",
+                                            "max_height": "",
+                                            "max_size": "",
+                                            "mime_types": "",
+                                            "preview_size": "medium",
+                                            "parent_repeater": "field_67e9b2c3d4e09"
+                                        },
+                                        {
+                                            "key": "field_67e9b2c3d4e0b",
+                                            "label": "Titre",
+                                            "name": "card_title",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "70",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "Roll-up Économique",
+                                            "prepend": "",
+                                            "append": "",
+                                            "parent_repeater": "field_67e9b2c3d4e09"
+                                        },
+                                        {
+                                            "key": "field_67e9b2c3d4e0c",
+                                            "label": "Description",
+                                            "name": "card_text",
+                                            "aria-label": "",
+                                            "type": "textarea",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "rows": 3,
+                                            "placeholder": "",
+                                            "new_lines": "br",
+                                            "parent_repeater": "field_67e9b2c3d4e09"
+                                        },
+                                        {
+                                            "key": "field_67e9b2c3d4e0d",
+                                            "label": "Étiquettes",
+                                            "name": "card_tags",
+                                            "aria-label": "",
+                                            "type": "repeater",
+                                            "instructions": "Pills sous la description (dimensions, matière, avantage…).",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "layout": "table",
+                                            "pagination": 0,
+                                            "min": 0,
+                                            "max": 0,
+                                            "collapsed": "",
+                                            "button_label": "Ajouter une étiquette",
+                                            "rows_per_page": 20,
+                                            "parent_repeater": "field_67e9b2c3d4e09",
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_67e9b2c3d4e0e",
+                                                    "label": "Libellé",
+                                                    "name": "tag_label",
+                                                    "aria-label": "",
+                                                    "type": "text",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "default_value": "",
+                                                    "maxlength": "",
+                                                    "placeholder": "85 × 200 cm",
+                                                    "prepend": "",
+                                                    "append": "",
+                                                    "parent_repeater": "field_67e9b2c3d4e0d"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_67e9b2c3d4e0f",
+                            "label": "Paramètres",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_67e9b2c3d4e10",
+                            "label": "Paramètres avancés",
+                            "name": "parameters",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_65d32fcaa80d1"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -3226,5 +3587,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1795451270
+    "modified": 1795451706
 }
