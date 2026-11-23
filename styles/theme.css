@@ -1022,3 +1022,138 @@ button{
         font-size: 28px;
     }
 }
+
+/* Strate Pages liées (maillage) */
+.strate-pages-liees{
+    background: #FAF8F5;
+    padding: 85px 0;
+}
+
+.strate-pages-liees__intro{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.strate-pages-liees__eyebrow{
+    margin: 0 0 12px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #AE6532;
+}
+
+.strate-pages-liees__title{
+    margin: 0;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 800;
+    color: #1C2056;
+}
+
+.strate-pages-liees__grid{
+    display: grid;
+    gap: 20px;
+}
+
+.strate-pages-liees__grid--cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.strate-pages-liees__grid--cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.strate-pages-liees__grid--cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.strate-pages-liees__card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    min-height: 120px;
+    padding: 28px 26px;
+    background: #FFF;
+    border: 1px solid #1C2056;
+    border-radius: 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+
+a.strate-pages-liees__card:hover{
+    background: #FFF;
+    text-decoration: none;
+    box-shadow: 0 10px 24px rgba(28, 32, 86, 0.1);
+    transform: translateY(-2px);
+}
+
+a.strate-pages-liees__card:hover .strate-pages-liees__card-link{
+    color: #D78349;
+}
+
+.strate-pages-liees__card-title{
+    display: block;
+    font-size: 22px;
+    line-height: 1.25;
+    font-weight: 800;
+    color: #1C2056;
+}
+
+.strate-pages-liees__card-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #AE6532;
+    transition: color .25s ease;
+}
+
+.strate-pages-liees__card-arrow{
+    font-size: 16px;
+    line-height: 1;
+}
+
+@media (max-width: 1100px){
+    .strate-pages-liees__grid--cols-4{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 991px){
+    .strate-pages-liees__title{
+        font-size: 36px;
+    }
+
+    .strate-pages-liees__grid--cols-3{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 575px){
+    .strate-pages-liees{
+        padding: 55px 0;
+    }
+
+    .strate-pages-liees__title{
+        font-size: 28px;
+    }
+
+    .strate-pages-liees__grid--cols-2,
+    .strate-pages-liees__grid--cols-3,
+    .strate-pages-liees__grid--cols-4{
+        grid-template-columns: 1fr;
+    }
+
+    .strate-pages-liees__card{
+        min-height: 0;
+        padding: 22px 20px;
+    }
+
+    .strate-pages-liees__card-title{
+        font-size: 18px;
+    }
+}
